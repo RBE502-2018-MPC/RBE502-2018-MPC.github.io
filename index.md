@@ -28,8 +28,8 @@ This is just some preliminary notes for now for how to setup everything.
 * Set a static IP for you computer, and connect using ethernet through the switch connected to the vicon system.
 * I set my static IP as: 192.168.10.111
 * Maybe set yours to something like 192.168.10.112 or something around there, but it shouldn't really matter unless two of us are connected
-* Turn on the Vicon system.  There is a switch in the back facing towards the motion capture area.  If the vicon system is on, there should be some leds on each of the cameras, and I think they should be blue.
-* Start the Vicon Tracker software on the Windows computer and make sure that the cameras are connected.  If you click on one of the cameras in the software, the LED on the respective camera should change color (I think it's purple?)
+* Turn on the Vicon system.  There is a switch in the back facing towards the motion capture area.  If the vicon system is on, there should be some leds on each of the cameras that light up purple.
+* Start the Vicon Tracker software on the Windows computer and make sure that the cameras are connected (all the cameras should have blue LEDs).  If you click on one of the cameras in the software, the LED on the respective camera should change color to puruple
 * Make sure the rc_car object is selected in the objects tab, and deselect everything else.  You should see the car show up in the environment as orange points and lines
 * `roslaunch vrpn_client_ros sample.launch server:=192.168.10.1`
 * This should then be publishing to topics like
