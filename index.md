@@ -13,10 +13,10 @@ This is just some preliminary notes for now for how to setup everything.
 # Setting Up Vicon Code
 * `sudo apt install ros-kinetic-vrpn`
 * go to `<workspace>/src`
-* `git clone https://github.com/ros-drivers/vrpn_client_ros`
-* Comment out line 333 of `vrpn_client_ros.cpp`, and compile
+* `https://github.com/RBE502-2018-MPC/vrpn_client_ros`
 * go to `<workspace>`
 * `catkin_make`
+* There is a launch file provided called `mocap.launch` that sets the default IP address for the Vicon system we are using.
 * you can optionally make a new launch file that sets the windows computer as the default server ip address.
 
 # Using a Logitech Gamepad to Control the Car
@@ -31,7 +31,7 @@ This is just some preliminary notes for now for how to setup everything.
 * Turn on the Vicon system.  There is a switch in the back facing towards the motion capture area.  If the vicon system is on, there should be some leds on each of the cameras that light up purple.
 * Start the Vicon Tracker software on the Windows computer and make sure that the cameras are connected (all the cameras should have blue LEDs).  If you click on one of the cameras in the software, the LED on the respective camera should change color to puruple
 * Make sure the rc_car object is selected in the objects tab, and deselect everything else.  You should see the car show up in the environment as orange points and lines
-* `roslaunch vrpn_client_ros sample.launch server:=192.168.10.1`
+* `roslaunch vrpn_client_ros mocap.launch`
 * This should then be publishing to topics like
 * `/vrpn_client_node/rc_car/accel`
 * `/vrpn_client_node/rc_car/pose`
