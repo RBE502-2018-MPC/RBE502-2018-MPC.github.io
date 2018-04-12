@@ -1,14 +1,18 @@
 This is just some preliminary notes for now for how to setup everything.
 
 # Setting Up the RC_Node
-* Install the correct USB lib.  (something like libusb-0.1 or something.  Not 1.0.  TODO)
-* Follow the installation instructions on: https://www.pjrc.com/teensy/td_download.html
-* Make sure to install the udev rules for teensy hid: https://www.pjrc.com/teensy/49-teensy.rules
+* Install stuff for USB headers: \
+  `sudo apt install libusb-0.1-4 libusb-dev`
+* Install the udev rules for teensy hid: https://www.pjrc.com/teensy/49-teensy.rules
 * `sudo cp 49-teensy.rules /etc/udev/rules.d/`
+* Make sure that your username is in the dialout group \
+  `sudo usermod -a -G dialout exampleusername`
+* Log out and log back in
 * go to `<workspace>/src`
 * `https://github.com/RBE502-2018-MPC/rc_node`
 * go to `<workspace>`
 * `catkin_make` 
+* If you want to modify the code that is running on the Teensy, install Arduino 1.8.5 (other versions should work), and Teensyduino
 
 # Setting Up Vicon Code
 * `sudo apt install ros-kinetic-vrpn`
