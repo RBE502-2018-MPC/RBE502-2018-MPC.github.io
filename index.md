@@ -41,3 +41,6 @@ This is just some preliminary notes for now for how to setup everything.
 * `/vrpn_client_node/rc_car/pose`
 * `/vrpn_client_node/rc_car/twist`
 * Note that the accel topic won't be publishing anything useful, because it needs to be disabled to prevent the system from crashing.
+
+# Running the PID controller
+* `rosrun pid_control pid_control.py`
