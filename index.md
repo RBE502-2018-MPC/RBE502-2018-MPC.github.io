@@ -1,5 +1,3 @@
-This is just some preliminary notes for now for how to setup everything.
-
 # Setting Up the RC_Node
 * Install stuff for USB headers: \
   `sudo apt install libusb-0.1-4 libusb-dev`
